@@ -1,0 +1,132 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmploiDeTemp">
+
+    <!-- Scroll vertical -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- TITRE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emploi de temps"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp" />
+
+
+            <!-- Scroll horizontal -->
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="1"
+                    android:padding="16dp">
+
+                    <TableRow android:background="#C8E6C9">
+                        <TextView android:text="Jour" android:padding="8dp" android:textStyle="bold"/>
+                        <TextView android:text="S1" android:padding="8dp" android:textStyle="bold"/>
+                        <TextView android:text="S2" android:padding="8dp" android:textStyle="bold"/>
+                        <TextView android:text="S3" android:padding="8dp" android:textStyle="bold"/>
+                        <TextView android:text="S4" android:padding="8dp" android:textStyle="bold"/>
+                        <TextView android:text="S5" android:padding="8dp" android:textStyle="bold"/>
+                        <TextView android:text="S6" android:padding="8dp" android:textStyle="bold"/>
+                    </TableRow>
+
+                    <!-- Exemple : Lundi -->
+                    <TableRow>
+                        <TextView android:text="Lundi" android:padding="8dp"/>
+                        <TextView android:text="08:30 - 10:00\nG 03\nSC32-(C2)" android:padding="8dp"/>
+                        <TextView android:text="10:15 - 11:45\nG 03\nSC32-(C2)" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="14:00 - 16:00\nG 01\nLI1 (C1)" android:padding="8dp"/>
+                        <TextView android:text="16:15 - 18:15\nG 01\nLI1 (C1)" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                    </TableRow>
+
+                    <!-- Exemple : Mardi -->
+                    <TableRow>
+                        <TextView android:text="Mardi" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="14:00 - 16:00\nG 02\nLI11(C1)" android:padding="8dp"/>
+                        <TextView android:text="16:15 - 18:15\nG 02\nLI11(C1)" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                    </TableRow>
+
+                    <!-- Mercredi -->
+                    <TableRow>
+                        <TextView android:text="Mercredi" android:padding="8dp"/>
+                        <TextView android:text="08:30 - 10:00\nG 04\nLI2 (C1)" android:padding="8dp"/>
+                        <TextView android:text="10:15 - 11:45\nG 04\nLI2 (C1)" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                    </TableRow>
+
+                    <!-- Jeudi -->
+                    <TableRow>
+                        <TextView android:text="Jeudi" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                    </TableRow>
+
+                    <!-- Vendredi -->
+                    <TableRow>
+                        <TextView android:text="Vendredi" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="14:00 - 16:00\nG 05\nLI23 (C1)" android:padding="8dp"/>
+                        <TextView android:text="16:15 - 18:15\nG 05\nLI23 (C1)" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                    </TableRow>
+
+                    <!-- Samedi -->
+                    <TableRow>
+                        <TextView android:text="Samedi" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+                        <TextView android:text="" android:padding="8dp"/>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerViewEmploi"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </TableRow>
+
+                </TableLayout>
+
+            </HorizontalScrollView>
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

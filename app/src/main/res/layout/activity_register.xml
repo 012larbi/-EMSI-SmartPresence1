@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="@drawable/background">
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="356dp"
+        android:layout_height="207dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo_emsi" />
+    <!-- Texte de Login-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+    <!-- Champ Name -->
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Nom"
+        android:padding="10dp"
+        android:background="@drawable/input_background"
+        android:textColor="@color/black"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="20dp"/>
+    <!-- Champ Email -->
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Email"
+        android:padding="10dp"
+        android:background="@drawable/input_background"
+        android:textColor="@color/black"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="20dp"/>
+    <!-- Champ Mot de passe -->
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Mot de passe"
+        android:padding="10dp"
+        android:background="@drawable/input_background"
+        android:textColor="@color/black"
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/et_confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Confirme mot de passe"
+        android:padding="10dp"
+        android:background="@drawable/input_background"
+        android:textColor="@color/black"
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"/>
+    <!-- Bouton de connexion -->
+    <Button
+        android:id="@+id/btn_Register"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Créer Account"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have account? Login"
+        android:textColor="@color/black"
+        android:padding="16dp"
+        android:clickable="true"
+        android:focusable="true" />
+</LinearLayout>

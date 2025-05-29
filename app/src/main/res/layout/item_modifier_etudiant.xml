@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="8dp">
+
+    <EditText
+        android:id="@+id/etNom"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:hint="Nom"
+        android:textSize="16sp"
+        android:inputType="textPersonName"/>
+
+    <CheckBox
+        android:id="@+id/cbAbsent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Absent"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/etRemarque"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="wrap_content"
+        android:hint="Remarque"
+        android:textSize="16sp"
+        android:inputType="text"
+        android:layout_marginStart="16dp"/>
+
+</LinearLayout>

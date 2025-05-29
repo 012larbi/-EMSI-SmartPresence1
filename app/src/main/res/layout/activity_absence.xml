@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvEtudiants"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btnEnregistrer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enregistrer les absences"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFF"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnVoirAbsents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voir les absents"
+        android:backgroundTint="#FF5722"
+        android:textColor="#FFF"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnModifierAbsences"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Modifier les absences"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFF"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>

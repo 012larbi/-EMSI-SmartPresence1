@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions de base -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    //<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Permissions de localisation -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Pour Android 10+ -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"
+        tools:ignore="ManifestPermission" />
+
+    <!-- Nécessaire pour ouvrir Google Maps -->
+    <queries>
+        <package android:name="com.google.android.apps.maps" />
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EmsiSmartPresence">
+
+        <!-- Clé API Google Maps -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDTSYsTTKw95kObArp3WPIFxO3Vr3-XVRE" />
+
+        <!-- Page de connexion -->
+        <activity
+            android:name=".Signin"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Pages principales -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".AdminActivity"
+            android:exported="true" />
+
+        <!-- Autres activités -->
+        <activity android:name=".AbsenceActivity" />
+        <activity android:name=".ListeAbsentsActivity" />
+        <activity android:name=".ListeEtudiantsActivity" />
+        <activity android:name=".ModifierAbsenceActivity" />
+
+        <activity android:name=".AddPlanningActivity" />
+        <activity android:name=".PlanningActivity" />
+        <activity android:name=".EmploiDeTemp" android:label="Emploi du Temps" />
+
+
+        <activity android:name=".DocumentActivity" />
+        <activity android:name=".AddDocumentActivity" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
+            android:name=".AssistantVirtuelActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Maps"
+            android:exported="false" />
+
+
+    </application>
+
+</manifest>
